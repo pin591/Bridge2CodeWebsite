@@ -8,7 +8,6 @@
 /* ===== BODY / FONDO ===== */
 body {
   min-height: 100vh;
-  /* Degradado igual al de la foto: azul medianoche → azul marino → azul petróleo */
   background: linear-gradient(135deg, #0d1b3e 0%, #0e2a52 35%, #0e3a5c 65%, #0a3048 100%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   display: flex;
@@ -69,7 +68,7 @@ main {
   padding: 0 24px 24px;
 }
 
-/* ===== QUICKBAR (mini-tarjetas Inicio/Lecciones/Ejercicios/etc) ===== */
+/* ===== QUICKBAR ===== */
 .quickbar {
   display: flex;
   align-items: center;
@@ -228,8 +227,8 @@ main {
 
 /* ===== CALENDAR GRID ===== */
 .cal-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 8px;
 }
 
@@ -239,6 +238,8 @@ main {
   border-radius: 10px;
   padding: 10px 8px;
   min-height: 300px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .day-header {
@@ -391,22 +392,17 @@ main {
         justify-content: center;
     }
 
-    .meto-header h1 {
-        font-size: 2.2rem;
+    .cal-grid {
+        flex-wrap: wrap;
     }
 
-    .meto-phases-grid,
-    .meto-resources-grid {
-        grid-template-columns: 1fr;
+    .day-col {
+        flex: 1 1 calc(50% - 8px);
     }
 }
 
 @media (max-width: 480px) {
-    .meto-header h1 {
-        font-size: 1.8rem;
-    }
-
-    .meto-card {
-        padding: 20px;
+    .day-col {
+        flex: 1 1 100%;
     }
 }
