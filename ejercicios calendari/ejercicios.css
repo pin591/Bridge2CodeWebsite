@@ -1,0 +1,426 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== BODY / FONDO ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #43c737 0%, #2f60b6 30%, #223e75 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===================================================== */
+/* ===== HEADER / LOGO / NAV PRINCIPAL =================== */
+/* ===================================================== */
+
+header {
+    padding: 14px 20px;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    display: flex;
+}
+
+.nav-button,
+.nav-button-active {
+    text-decoration: none;
+    color: rgb(250, 249, 249);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button-active {
+    background-color: #7b61ff;
+    color: #ffffff;
+}
+
+/* ICONOS SOCIALES DEL HEADER */
+header .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: 20px;
+}
+
+header .social-icons a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header .social-icons a:hover {
+    color: #7b61ff;
+}
+
+@media (max-width: 992px) {
+    header .d-flex {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header nav .nav {
+        justify-content: center;
+    }
+
+    header .social-icons {
+        margin-left: 0;
+    }
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 0 24px 24px;
+}
+
+/* ===================================================== */
+/* ===== BARRA DE ACCESOS RAPIDOS (navbar ejercicios) ==== */
+/* ===================================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background-color: #b3b9cb;
+    color: #1e2229;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.nav-btn.active {
+    background-color: #7b61ff;
+    color: #ffffff;
+}
+
+.btn-help {
+    background-color: #a78bfa;
+    color: #1a103c;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.btn-agenda {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===================================================== */
+/* ===== CONTENEDOR PRINCIPAL DE EJERCICIOS ============= */
+/* ===================================================== */
+
+.container {
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.toggle-tabs {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 30px;
+    display: flex;
+}
+
+.tab {
+    background: transparent;
+    border: none;
+    color: #b3b9cb;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #ffffff;
+    color: #1e2229;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-live {
+    background-color: #86efac;
+    color: #064e3b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-chat {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* LISTA Y FILAS DE TAREAS */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-row {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #1e2229;
+    border-radius: 16px;
+    padding: 15px 20px;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.task-badge {
+    width: 130px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.task-info {
+    flex-grow: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.task-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.task-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #4b5563;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.task-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-expired {
+    background-color: #ef4444;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-action {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-action:hover {
+    background-color: #222222;
+}
+
+/* ===================================================== */
+/* ===== FOOTER PRINCIPAL ================================ */
+/* ===================================================== */
+
+.footer {
+    margin-top: 40px;
+    padding: 50px 20px 20px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer h3,
+.footer h5 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    max-width: 300px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #43c737;
+}
+
+.footer-social .social-icons a {
+    font-size: 22px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+/* ===================================================== */
+/* ===== RESPONSIVE ====================================== */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+    .task-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-info {
+        margin-left: 0;
+    }
+
+    .btn-action {
+        width: 100%;
+    }
+}
